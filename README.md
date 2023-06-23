@@ -1,6 +1,6 @@
-# 🎉 Birthday Wish Generator
+# 🎉 Birthday WishCraft
 
-The Birthday Wish Generator is a Python script that generates personalized birthday wishes. It allows you to input the recipient's name, your name, and their age. The script then randomly selects a birthday wish from a collection of wishes and generates a personalized wish by replacing placeholders with the actual names and age.
+The Birthday WishCraft is a Python script that generates personalized birthday wishes. It allows you to input the recipient's name, your name, and their age. The script then randomly selects a birthday wish from a collection of wishes and generates a personalized wish by replacing placeholders with the actual names and age.
 
 ## ✨ Features
 
@@ -12,7 +12,7 @@ The Birthday Wish Generator is a Python script that generates personalized birth
 
 ## 📋 Prerequisites
 
-To run the Birthday Wish Generator, ensure that you have the following installed:
+To run the Birthday WishCraft, ensure that you have the following installed:
 
 - Python (Version 3.6 or higher)
 - pip (Python package manager)
@@ -28,7 +28,7 @@ pip install fpdf
 1. Clone the repository to your local machine or download the source code as a ZIP file.
     
     ```bash
-    git clone git@github.com:geekyharsh05/Birthday-Wish-Generator.git
+    git clone git@github.com:geekyharsh05/Birthday-WishCraft.git
     ```
 
 2. Open a terminal or command prompt and navigate to the project's root directory.
@@ -58,8 +58,8 @@ pip install fpdf
 
 ## 🤝 Contributing
 
-Contributions to the Birthday Wishes Generator are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the project's GitHub repository.
+Contributions to the Birthday WishCraft are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the project's GitHub repository.
 
 ## 📄 License
 
-The Birthday Wishes Generator is open source software licensed under the [MIT License](LICENSE). Feel free to modify and distribute the code as per the license terms.
+The Birthday WishCraft is open source software licensed under the [MIT License](LICENSE). Feel free to modify and distribute the code as per the license terms.
