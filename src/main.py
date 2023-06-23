@@ -1,3 +1,10 @@
+"""
+Birthday WishCraft
+
+@Author: Harsh Vardhan Pandey
+@Github: geekyharsh05
+A simple Python script to send birthday wishes to your friends and family.
+"""
 import json
 import random
 from fpdf import FPDF   # install fpdf using pip install fpdf
