@@ -5,29 +5,29 @@ Birthday WishCraft
 @Github: geekyharsh05
 A simple Python script to send birthday wishes to your friends and family.
 """
+
 import json
 import random
-from fpdf import FPDF   # install fpdf using pip install fpdf
+from fpdf import FPDF  # install fpdf using pip install fpdf
 
 
 def load_wishes_from_json(filename):
     # Load wishes from a JSON file
     try:
-        with open(filename, 'r') as file:
+        with open(filename, "r") as file:
             wishes = json.load(file)
         return wishes
     except FileNotFoundError:
         print(f"Error: File '{filename}' not found.")
     except json.JSONDecodeError:
-        print(
-            f"Error: Failed to load wishes from '{filename}'. Invalid JSON format.")
+        print(f"Error: Failed to load wishes from '{filename}'. Invalid JSON format.")
     return []
 
 
 def save_sent_wish(wish, filename):
     # Save the sent wish to a text file
     try:
-        with open(filename, 'a') as file:
+        with open(filename, "a") as file:
             file.write(wish + "\n")
         print("Sent wish has been saved.")
     except IOError:
@@ -42,7 +42,7 @@ def generate_personalized_wish(name, wish):
 def save_output(output, filename):
     # Save the entire output to a text file
     try:
-        with open(filename, 'w') as file:
+        with open(filename, "w") as file:
             file.write(output)
         print(f"Output has been saved to '{filename}'.")
     except IOError:
@@ -63,28 +63,31 @@ def convert_txt_to_pdf(txt_file, pdf_file):
     pdf.output(pdf_file)
 
 
-def wishBirthday(name,
-                 yourName,
-                 age,
-                 save_sent_wishes=True,
-                 save_output_file=True,
-                 convert_to_pdf=True):
+def wishBirthday(
+    name,
+    yourName,
+    age,
+    save_sent_wishes=True,
+    save_output_file=True,
+    convert_to_pdf=True,
+):
     # Load wishes from a JSON file
-    wishes = load_wishes_from_json('wishes.json')
+    wishes = load_wishes_from_json("wishes.json")
 
     if wishes:
         print(f"\nDear {name},")
-        print('')
+        print("")
         print("Hope you're having a good day!")
         selected_wish = random.choice(wishes)
         personalized_wish = generate_personalized_wish(name, selected_wish)
         print(personalized_wish)
         print(
-            f"Wishing you a wonderful year and a great time turning {age} years young.")
-        print('')
+            f"Wishing you a wonderful year and a great time turning {age} years young."
+        )
+        print("")
         print("Best regards,")
         print(yourName)
-        print('')
+        print("")
 
         if save_sent_wishes:
             # Save the sent wish to a text file
@@ -109,6 +112,21 @@ def wishBirthday(name,
 
 
 def setup():
+    print("*************************************************")
+    print("*                                               *")
+    print("*        ██████╗  █████╗ ███████╗████████╗      *")
+    print("*        ██╔══██╗██╔══██╗██╔════╝╚══██╔══╝      *")
+    print("*        ██████╔╝███████║███████╗   ██║         *")
+    print("*        ██╔═══╝ ██╔══██║╚════██║   ██║         *")
+    print("*        ██║     ██║  ██║███████║   ██║         *")
+    print("*        ╚═╝     ╚═╝  ╚═╝╚══════╝   ╚═╝         *")
+    print("*                                               *")
+    print("*      Welcome to the realm of birthday magic!  *")
+    print("*      Where heartfelt wishes come to life.     *")
+    print("*                                               *")
+    print("*************************************************")
+    print("")
+
     # Gather input from the user
     while True:
         nameInput = input("Hey there! What's your card's receiver's name? ")
@@ -161,8 +179,7 @@ def setup():
             print("Error: Invalid input. Please enter 'Y' or 'N'.")
 
     while True:
-        convertToPdfInput = input(
-            "Convert output file to PDF? (Y/N): ").lower()
+        convertToPdfInput = input("Convert output file to PDF? (Y/N): ").lower()
         if convertToPdfInput == "y":
             convert_to_pdf = True
             break
@@ -172,12 +189,14 @@ def setup():
         else:
             print("Error: Invalid input. Please enter 'Y' or 'N'.")
 
-    wishBirthday(nameInput,
-                 yourNameInput,
-                 ageInput,
-                 save_sent_wishes=save_sent_wishes,
-                 save_output_file=save_output_file,
-                 convert_to_pdf=convert_to_pdf)
+    wishBirthday(
+        nameInput,
+        yourNameInput,
+        ageInput,
+        save_sent_wishes=save_sent_wishes,
+        save_output_file=save_output_file,
+        convert_to_pdf=convert_to_pdf,
+    )
 
 
 # Start the code
