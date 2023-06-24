@@ -200,4 +200,5 @@ def setup():
 
 
 # Start the code
-setup()
+if __name__ == '__main__':
+    setup()
